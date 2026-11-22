@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zafe</string>
+    <string name="slogan_zafe">Controlá tu inventario, los vencimientos y la reposición.</string>
+    <string name="logo_zafe">Logo de ZAFE</string>
+    <string name="crear_cuenta"><u>Crear cuenta</u></string>
+    <string name="ingresar"><u>Ingresar</u></string>
+</resources>
