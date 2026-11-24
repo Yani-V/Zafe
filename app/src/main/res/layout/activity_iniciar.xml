@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla = Iniciar -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,13 +15,17 @@
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="48dp"
         android:contentDescription="@string/logo_zafe"
         android:scaleType="fitCenter"
         android:src="@drawable/logo_zafe_icono_chico"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitulo"
+        app:layout_constraintEnd_toStartOf="@+id/logo_texto_esquina"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título -->
+    <!-- Logo título -->
 
     <ImageView
         android:id="@+id/logo_texto_esquina"
@@ -35,13 +40,14 @@
         app:layout_constraintStart_toEndOf="@id/logo_esquina"
         app:layout_constraintTop_toTopOf="@id/logo_esquina" />
 
+    <!-- Título Ingresar -->
+
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="5dp"
         android:text="Ingresar"
         android:textColor="#7b2d3b"
         android:textSize="20sp"
@@ -57,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="25dp"
         android:text="Entrá para ver tu inventario."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,14 +71,12 @@
 
     <!-- Mensaje de error -->
 
-    <!-- Título Email -->
-
     <Button
         android:id="@+id/txtError"
         android:layout_width="355dp"
         android:layout_height="38dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="100dp"
         android:backgroundTint="#FAF8F0D2"
@@ -87,6 +91,8 @@
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSubtitulo" />
+
+    <!-- Título Email -->
 
     <TextView
         android:id="@+id/txtTitleEmail"
@@ -121,8 +127,6 @@
 
     <!-- Título contraseña -->
 
-    <!-- Cajita contraseña -->
-
     <TextView
         android:id="@+id/txtTitleContrasena"
         android:layout_width="wrap_content"
@@ -135,9 +139,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxtEmail" />
 
-    <!-- Botón Ingresar -->
-
-    <!-- No tenés cuenta? -->
+    <!-- Cajita contraseña-->
 
     <EditText
         android:id="@+id/editContrasena"
@@ -145,7 +147,7 @@
         android:layout_height="47dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/input_normal"
         android:hint="Tu contraseña"
         android:inputType="textPassword"
@@ -157,12 +159,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleContrasena" />
 
+    <!-- Botón Ingresar -->
+
     <Button
         android:id="@+id/btnIngresar"
         android:layout_width="353dp"
         android:layout_height="54dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/borde_color"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
         android:padding="8dp"
         android:text="Ingresar"
         android:textAlignment="center"
@@ -171,6 +177,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editContrasena" />
+
+    <!-- Crear cuenta -->
 
     <TextView
         android:id="@+id/txtCrearCuenta"
@@ -185,6 +193,8 @@
         app:layout_constraintStart_toEndOf="@+id/txtNoTenesCuenta"
         app:layout_constraintTop_toTopOf="@+id/txtNoTenesCuenta" />
 
+    <!-- No tenés cuenta? -->
+
     <TextView
         android:id="@+id/txtNoTenesCuenta"
         android:layout_width="wrap_content"
@@ -196,6 +206,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
 
-    <!-- Crear cuenta -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
