@@ -7,125 +7,20 @@
     android:background="#FFFCEE"
     tools:context=".IniciarActivity">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/crear_cuenta"
-        android:textColor="#7b2d3b"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="538dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:text="Contraseña"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="370dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿No tenés cuenta?"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="538dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="313dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="45dp"
-        android:background="@drawable/borde_color"
-        android:paddingTop="8dp"
-        android:text="ingresar"
-        android:textAlignment="center"
-        android:textColor="#FFFCEE"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="481dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:text="Ingresar"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="106dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:text="Entrá para ver tu inventario."
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="165dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:text="Email"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="258dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="316dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="416dp"
-        android:layout_marginEnd="45dp"
-        android:background="@drawable/borde"
-        android:hint="Tu contraseña"
-        android:textAlignment="textStart"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="313dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="45dp"
-        android:backgroundTint="#FAF8F0D2"
-        android:paddingLeft="14dp"
-        android:text="Email o contraseña incorrectos"
-        android:textAlignment="textStart"
-        android:textColor="#C33B31"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- Logo -->
     <ImageView
         android:id="@+id/logo_esquina"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="@string/logo_zafe"
         android:scaleType="fitCenter"
         android:src="@drawable/logo_zafe_icono_chico"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título -->
 
     <ImageView
         android:id="@+id/logo_texto_esquina"
@@ -140,15 +35,167 @@
         app:layout_constraintStart_toEndOf="@id/logo_esquina"
         app:layout_constraintTop_toTopOf="@id/logo_esquina" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <TextView
+        android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="32dp"
+        android:text="Ingresar"
+        android:textColor="#7b2d3b"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_esquina" />
+
+    <!-- Subtítulo -->
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Entrá para ver tu inventario."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <!-- Mensaje de error -->
+
+    <!-- Título Email -->
+
+    <Button
+        android:id="@+id/txtError"
+        android:layout_width="355dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#FAF8F0D2"
+        android:paddingLeft="14dp"
+        android:text="Email o contraseña incorrectos"
+        android:textAlignment="textStart"
+        android:textColor="#C33B31"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitleEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubtitulo" />
+
+    <TextView
+        android:id="@+id/txtTitleEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtError" />
+
+    <!-- Cajita Email -->
+
+    <EditText
+        android:id="@+id/editTxtEmail"
+        android:layout_width="354dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_normal"
         android:ems="10"
         android:hint="nombre@correo"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitleEmail" />
+
+    <!-- Título contraseña -->
+
+    <!-- Cajita contraseña -->
+
+    <TextView
+        android:id="@+id/txtTitleContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Contraseña"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtEmail" />
+
+    <!-- Botón Ingresar -->
+
+    <!-- No tenés cuenta? -->
+
+    <EditText
+        android:id="@+id/editContrasena"
+        android:layout_width="346dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/input_normal"
+        android:hint="Tu contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleContrasena" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="353dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/borde_color"
+        android:padding="8dp"
+        android:text="Ingresar"
+        android:textAlignment="center"
+        android:textColor="#fffcee"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editContrasena" />
+
+    <TextView
+        android:id="@+id/txtCrearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/crear_cuenta"
+        android:textColor="#7b2d3b"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNoTenesCuenta"
+        app:layout_constraintStart_toEndOf="@+id/txtNoTenesCuenta"
+        app:layout_constraintTop_toTopOf="@+id/txtNoTenesCuenta" />
+
+    <TextView
+        android:id="@+id/txtNoTenesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="16dp"
+        android:text="¿No tenés cuenta?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+    <!-- Crear cuenta -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

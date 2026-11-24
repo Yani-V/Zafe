@@ -24,21 +24,21 @@
             <!-- Izquierda -->
             <ImageView
                 android:id="@+id/btnVolver"
-                android:layout_width="29dp"
-                android:layout_height="27dp"
-                app:tint="#7B2D3B"
-                app:srcCompat="@drawable/arrow_back_ios" />
+                android:layout_width="28dp"
+                android:layout_height="23dp"
+                app:srcCompat="@drawable/arrow_back_ios"
+                app:tint="#7B2D3B" />
 
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="12dp"
+                android:layout_weight="1"
                 android:text="Nuevo producto"
+                android:textColor="#7B2D3B"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#7B2D3B" />
+                android:textStyle="bold" />
 
             <!-- Derecha: Logo en la esquina superior derecha -->
             <LinearLayout
@@ -80,8 +80,19 @@
             android:ems="10"
             android:hint="Ej: Arroz 1 kg"
             android:inputType="text"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/errorNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Ingresá el nombre del producto"
+            android:textColor="#9b1c1c"
+            android:textSize="13sp"
+            android:visibility="gone" />
 
         <!-- Código de barras -->
         <TextView
@@ -101,6 +112,7 @@
             android:ems="10"
             android:hint="13 dígitos"
             android:inputType="number"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
@@ -134,6 +146,7 @@
                     android:ems="10"
                     android:hint="0"
                     android:inputType="number"
+                    android:background="@drawable/input_normal"
                     android:paddingStart="15dp"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -161,6 +174,7 @@
                     android:ems="10"
                     android:hint="0"
                     android:inputType="number"
+                    android:background="@drawable/input_normal"
                     android:paddingStart="15dp"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -184,6 +198,7 @@
             android:ems="10"
             android:hint="$ 0,00"
             android:inputType="numberDecimal"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
@@ -205,6 +220,7 @@
             android:ems="10"
             android:hint="dd/mm/aaaa"
             android:inputType="date"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
@@ -226,6 +242,7 @@
             android:ems="10"
             android:hint="Nombre del proveedor"
             android:inputType="text"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
@@ -247,6 +264,7 @@
             android:ems="10"
             android:hint="Ciudad - Provincia"
             android:inputType="text"
+            android:background="@drawable/input_normal"
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
