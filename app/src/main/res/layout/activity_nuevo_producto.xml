@@ -288,7 +288,7 @@
                 android:textColor="#7B2D3B" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnGuardar"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
