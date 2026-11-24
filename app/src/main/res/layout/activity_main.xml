@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Pantalla Main - Splash de Inicio -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,35 +10,38 @@
     android:background="#FFFCEE"
     tools:context=".MainActivity" >
 
+    <!-- Logo ZAFE -->
     <ImageView
-        android:id="@+id/splash_escudo"
+        android:id="@+id/splash_logoZafe"
         android:layout_width="wrap_content"
         android:layout_height="140dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/logo_zafe"
         android:src="@drawable/logo_zafe_icono"
-        app:layout_constraintBottom_toTopOf="@id/splash_texto"
+        app:layout_constraintBottom_toTopOf="@id/splash_textoZafe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4"
         app:layout_constraintVertical_chainStyle="packed" />
 
+    <!-- Titulo Logo Zafe -->
     <ImageView
-        android:id="@+id/splash_texto"
+        android:id="@+id/splash_textoZafe"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         android:contentDescription="@null"
         android:src="@drawable/logo_zafe_texto"
-        app:layout_constraintBottom_toTopOf="@id/splash_eslogan"
+        app:layout_constraintBottom_toTopOf="@id/splash_esloganZafe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/splash_escudo" />
+        app:layout_constraintTop_toBottomOf="@id/splash_logoZafe" />
 
+    <!-- Eslogan Logo Zafe -->
     <TextView
-        android:id="@+id/splash_eslogan"
+        android:id="@+id/splash_esloganZafe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -49,8 +54,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/splash_texto" />
+        app:layout_constraintTop_toBottomOf="@id/splash_textoZafe" />
 
+    <!-- Barrita de Carga -->
     <ProgressBar
         android:id="@+id/splash_progreso"
         style="?android:attr/progressBarStyleHorizontal"
