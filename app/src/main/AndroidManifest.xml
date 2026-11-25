@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zafe">
         <activity
-            android:name=".MainActivity"
+            android:name=".CargaActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

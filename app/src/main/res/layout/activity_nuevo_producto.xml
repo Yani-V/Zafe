@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Nuevo producto -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFCEE"
+    android:background="#fffcee"
     tools:context=".NuevoProductoActivity">
 
+    <!-- Contenedor principal -->
     <LinearLayout
+        android:id="@+id/nuevoContenedorPrincipal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,55 +19,64 @@
 
         <!-- Encabezado: Flecha + Título a la izquierda, Logo a la derecha -->
         <LinearLayout
+            android:id="@+id/nuevoEncabezado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <!-- Izquierda -->
+            <!-- Izquierda: Flecha volver -->
             <ImageView
-                android:id="@+id/btnVolver"
+                android:id="@+id/nuevoBtnVolver"
                 android:layout_width="28dp"
                 android:layout_height="23dp"
+                android:contentDescription="Volver"
+                android:clickable="true"
                 app:srcCompat="@drawable/arrow_back_ios"
-                app:tint="#7B2D3B" />
+                app:tint="#7b2d3b" />
 
+            <!-- Título Nuevo producto -->
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/nuevoLabelTitulo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="Nuevo producto"
-                android:textColor="#7B2D3B"
+                android:textColor="#7b2d3b"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <!-- Derecha: Logo en la esquina superior derecha -->
             <LinearLayout
+                android:id="@+id/nuevoContenedorLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
 
+                <!-- Logo icono -->
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/nuevoLogoIcono"
                     android:layout_width="60dp"
                     android:layout_height="54dp"
+                    android:contentDescription="Logo Zafe"
                     app:srcCompat="@drawable/logo_zafe_icono_chico" />
 
+                <!-- Logo texto -->
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/nuevoLogoTexto"
                     android:layout_width="60dp"
                     android:layout_height="22dp"
                     android:layout_marginTop="2dp"
+                    android:contentDescription="ZAFE"
                     app:srcCompat="@drawable/logo_zafe_texto" />
             </LinearLayout>
         </LinearLayout>
 
         <!-- Nombre -->
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/nuevoLabelNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -72,8 +84,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Nombre -->
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/nuevoInputNombre"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -84,8 +97,9 @@
             android:paddingStart="15dp"
             android:textSize="16sp" />
 
+        <!-- Error Nombre -->
         <TextView
-            android:id="@+id/errorNombre"
+            android:id="@+id/nuevoErrorNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -96,7 +110,7 @@
 
         <!-- Código de barras -->
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/nuevoLabelCodigoBarras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -104,8 +118,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Código de barras -->
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/nuevoInputCodigoBarras"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -118,12 +133,15 @@
 
         <!-- Stock -->
         <LinearLayout
+            android:id="@+id/nuevoContenedorStock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:orientation="horizontal">
 
+            <!-- Cantidad de Stock -->
             <LinearLayout
+                android:id="@+id/nuevoContenedorCantidadStock"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -131,7 +149,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView32"
+                    android:id="@+id/nuevoLabelCantidadStock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cantidad de Stock"
@@ -139,7 +157,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextNumber2"
+                    android:id="@+id/nuevoInputCantidadStock"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="6dp"
@@ -151,7 +169,9 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
+            <!-- Stock mínimo -->
             <LinearLayout
+                android:id="@+id/nuevoContenedorStockMinimo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -159,7 +179,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView33"
+                    android:id="@+id/nuevoLabelStockMinimo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Stock mínimo"
@@ -167,7 +187,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextNumber3"
+                    android:id="@+id/nuevoInputStockMinimo"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="6dp"
@@ -182,7 +202,7 @@
 
         <!-- Precio -->
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/nuevoLabelPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -190,8 +210,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Precio -->
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/nuevoInputPrecio"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -204,7 +225,7 @@
 
         <!-- Vencimiento -->
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/nuevoLabelVencimiento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -212,8 +233,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Vencimiento -->
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/nuevoInputVencimiento"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -226,7 +248,7 @@
 
         <!-- Proveedor -->
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/nuevoLabelProveedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -234,8 +256,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Proveedor -->
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/nuevoInputProveedor"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -248,7 +271,7 @@
 
         <!-- Ubicación -->
         <TextView
-            android:id="@+id/textView27"
+            android:id="@+id/nuevoLabelUbicacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -256,8 +279,9 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Ubicación -->
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/nuevoInputUbicacion"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
@@ -270,13 +294,15 @@
 
         <!-- Botones -->
         <LinearLayout
+            android:id="@+id/nuevoContenedorBotones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:orientation="horizontal">
 
+            <!-- Botón Cancelar -->
             <Button
-                android:id="@+id/btnCancelar"
+                android:id="@+id/nuevoBtnCancelar"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -285,10 +311,11 @@
                 android:backgroundTint="@null"
                 app:backgroundTint="@null"
                 android:text="Cancelar"
-                android:textColor="#7B2D3B" />
+                android:textColor="#7b2d3b" />
 
+            <!-- Botón Guardar -->
             <Button
-                android:id="@+id/btnGuardar"
+                android:id="@+id/nuevoBtnGuardar"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
@@ -297,7 +324,7 @@
                 android:backgroundTint="@null"
                 app:backgroundTint="@null"
                 android:text="Guardar"
-                android:textColor="#FFFCEE" />
+                android:textColor="#fffcee" />
         </LinearLayout>
 
     </LinearLayout>

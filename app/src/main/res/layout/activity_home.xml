@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Pantalla Home - Listado de Producto -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Pantalla Home - Listado de Productos -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -21,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Título logo -->
     <ImageView
         android:id="@+id/home_textoZafe"
         android:layout_width="90dp"
@@ -33,6 +35,7 @@
         app:layout_constraintStart_toEndOf="@id/home_logoZafe"
         app:layout_constraintTop_toTopOf="@id/home_logoZafe" />
 
+    <!-- Botón Salir -->
     <Button
         android:id="@+id/home_btnSalirZafe"
         android:layout_width="wrap_content"
@@ -64,6 +67,7 @@
 
         <!-- Tarjeta Productos -->
         <LinearLayout
+            android:id="@+id/home_tarjetaProductos"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
@@ -81,7 +85,9 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <!-- Texto Productos -->
             <TextView
+                android:id="@+id/home_labelProductos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Productos" />
@@ -89,6 +95,7 @@
 
          <!-- Tarjeta Stock Bajo -->
         <LinearLayout
+            android:id="@+id/home_tarjetaStockBajoZafe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
@@ -103,11 +110,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:textColor="#B7791F"
+                android:textColor="#b7791f"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <!-- Texto Stock Bajo -->
             <TextView
+                android:id="@+id/home_labelStockBajo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Stock bajo" />
@@ -115,6 +124,7 @@
 
         <!-- Tarjeta Vencidos -->
         <LinearLayout
+            android:id="@+id/home_tarjetaVencidos"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,11 +138,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:textColor="#C0392B"
+                android:textColor="#c0392b"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <!-- Texto Vencidos -->
             <TextView
+                android:id="@+id/home_labelVencidos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vencidos" />
@@ -152,7 +164,7 @@
         android:inputType="text"
         android:paddingStart="18dp"
         android:textAlignment="textStart"
-        android:textColor="#7A1C2E"
+        android:textColor="#7a1c2e"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,52 +184,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_buscarZafe">
 
+        <!-- Contenedor de la lista de productos -->
         <LinearLayout
+            android:id="@+id/home_listaProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 1er producto cargado: aceite (vencido) -->
+            <!-- 1er producto cargado: ejemplo = aceite (vencido) -->
             <LinearLayout
+                android:id="@+id/home_cardProducto1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/borde"
+                android:clickable="true"
                 android:orientation="horizontal"
                 android:padding="12dp">
 
+                <!-- Datos izquierda producto 1 -->
                 <LinearLayout
+                    android:id="@+id/home_datosProducto1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <!-- Nombre producto 1 -->
                     <TextView
+                        android:id="@+id/home_nombreProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="aceite"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <!-- Proveedor producto 1 -->
                     <TextView
+                        android:id="@+id/home_proveedorProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="HIERBASRURAL.SRL · El Bolsón"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
+                    <!-- Stock producto 1 -->
                     <LinearLayout
+                        android:id="@+id/home_stockProducto1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
 
+                        <!-- Cantidad producto 1 -->
                         <TextView
+                            android:is="@+id/home_cantidadProducto1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24"
                             android:textStyle="bold" />
 
+                        <!-- Mínimo producto 1 -->
                         <TextView
+                            android:id="@+id/home_minimoProducto1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
@@ -225,13 +253,16 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Precio y estado producto 1 -->
                 <LinearLayout
+                    android:id="@+id/home_precioProducto1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/home_precioPesosProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$ 1.800,00"
@@ -239,18 +270,21 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/home_precioDolarProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="US$ 1,17"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_vencimientoProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="17/10/2026"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_estadoProducto1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -258,52 +292,66 @@
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="4dp"
                         android:text="Vencido"
-                        android:textColor="#A31515"
+                        android:textColor="#a31515"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 2do producto cargado: Lavandina Ayudín (stock bajo) -->
+            <!-- 2do producto cargado: Ejemplo = Lavandina Ayudín (stock bajo) -->
             <LinearLayout
+                android:id="@+id/home_CardProducto2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/borde"
+                android:clickable="true"
                 android:orientation="horizontal"
                 android:padding="12dp">
 
+                <!-- Datos izquierda producto 2 -->
                 <LinearLayout
+                    android:id="@+id/home_datosProducto2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <!-- Nombre producto 2 -->
                     <TextView
+                        android:id="@+id/home_nombreProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Lavandina Ayudín 1l"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <!-- Proveedor producto 2 -->
                     <TextView
+                        android:id="@+id/home_proovedorProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="LIMPI.SRL · Buenos Aires"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
+                    <!-- Stock producto 2 -->
                     <LinearLayout
+                        android:id="@+id/home_stockProducto2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
 
+                        <!-- Cantidad producto 2 -->
                         <TextView
+                            android:id="@+id/home_cantidadProducto2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2"
                             android:textStyle="bold" />
 
+                        <!-- Mínimo producto 2 -->
                         <TextView
+                            android:id="@+id/home_minimoProducto2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
@@ -311,13 +359,16 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Precio y estado producto 2 -->
                 <LinearLayout
+                    android:id="@+id/home_precioProducto2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/home_precioPesosProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$ 1.300,00"
@@ -325,18 +376,21 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/home_precioDolarProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="US$ 0,84"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_vencimientoProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sin vencimiento"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_estadoProducto2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -344,52 +398,66 @@
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="4dp"
                         android:text="Stock bajo"
-                        android:textColor="#7A5200"
+                        android:textColor="#7a5200"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 3er producto cargado: Aceite Girasol (vigente) -->
+            <!-- 3er producto cargado: Ejemplo = Aceite Girasol (vigente) -->
             <LinearLayout
+                android:id="@+id/home_cardProducto3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/borde"
+                android:clickable="true"
                 android:orientation="horizontal"
                 android:padding="12dp">
 
+                <!-- Datos izquierda producto 3 -->
                 <LinearLayout
+                    android:id="@+id/home_datosProducto3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <!-- Nombre producto 3 -->
                     <TextView
+                        android:id="@+id/home_nombreProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Aceite Girasol 900 ml"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <!-- Proveedor producto 3 -->
                     <TextView
+                        android:id="@+id/home_proveedorProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="FRANKTUP.SRL · Jacobacci"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
+                    <!-- Stock producto 3 -->
                     <LinearLayout
+                        android:id="@+id/home_stockProducto3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
 
+                        <!-- Cantidad producto 3 -->
                         <TextView
+                            android:id="@+id/home_cantidadProducto3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12"
                             android:textStyle="bold" />
 
+                        <!-- Mínimo producto 3 -->
                         <TextView
+                            android:id="@+id/home_minimoProducto3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
@@ -397,13 +465,16 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Precio y estado producto 3 -->
                 <LinearLayout
+                    android:id="@+id/home_precioProducto3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/home_precioPesosProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$ 1.800,00"
@@ -411,18 +482,21 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/home_precioDolaProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="US$ 1,17"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_vencimientoProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="03/02/2027"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_estadoProducto3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -430,52 +504,66 @@
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="4dp"
                         android:text="Vigente"
-                        android:textColor="#1E6B32"
+                        android:textColor="#1e6b32"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 4to producto cargado: Yerba (vigente) -->
+            <!-- 4to producto cargado: Ejemplo = Yerba (vigente) -->
             <LinearLayout
+                android:id="@+id/home_cardProducto4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/borde"
+                android:clickable="true"
                 android:orientation="horizontal"
                 android:padding="12dp">
 
+                <!-- Datos izquierda producto 4 -->
                 <LinearLayout
+                    android:id="@+id/home_datosProducto4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <!-- Nombre producto 4 -->
                     <TextView
+                        android:id="@+id/home_nombreProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="yerba"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <!-- Proveedor producto 4 -->
                     <TextView
+                        android:id="@+id/home_proveedorProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="DAUSUR.SRL · Córdoba Capital"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
+                    <!-- Stock producto 4 -->
                     <LinearLayout
+                        android:id="@+id/home_stockProducto4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal">
 
+                        <!-- Cantidad producto 4 -->
                         <TextView
+                            android:id="@+id/home_cantidadProducto4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="48"
                             android:textStyle="bold" />
 
+                        <!-- Mínimo producto 4 -->
                         <TextView
+                            android:id="@+id/home_minimoProducto4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
@@ -483,13 +571,16 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Precio y estado producto 4 -->
                 <LinearLayout
+                    android:id="@+id/home_precioProducto4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/home_precioPesosProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$ 4.200,00"
@@ -497,18 +588,21 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/home_precioDolarProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="US$ 2,72"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_vencimientoProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="26/11/2026"
-                        android:textColor="#B3B1B1" />
+                        android:textColor="#b3b1b1" />
 
                     <TextView
+                        android:id="@+id/home_estadoProducto4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -516,7 +610,7 @@
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="4dp"
                         android:text="Vigente"
-                        android:textColor="#1E6B32"
+                        android:textColor="#1e6b32"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -534,7 +628,7 @@
         android:background="@drawable/borde_color"
         android:gravity="center"
         android:text="+  Producto"
-        android:textColor="#FFFCEE"
+        android:textColor="#fffcee"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

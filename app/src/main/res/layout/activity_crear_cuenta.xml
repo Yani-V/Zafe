@@ -46,9 +46,8 @@
         </LinearLayout>
 
         <!-- Título Crear Cuenta -->
-
         <TextView
-            android:id="@+id/txtCrearCuenta"
+            android:id="@+id/txtTituloCrearCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -58,7 +57,6 @@
             android:textStyle="bold" />
 
         <!-- Label Nombre -->
-
         <TextView
             android:id="@+id/txtLabelNombre"
             android:layout_width="wrap_content"
@@ -69,14 +67,13 @@
             android:textStyle="bold" />
 
         <!-- Cajita Nombre -->
-
         <EditText
-            android:id="@+id/editLabelNombre"
+            android:id="@+id/editNombre"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input_normal"
-            android:hint="tú nombre"
+            android:hint="tu nombre"
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:textColor="#000000"
@@ -84,7 +81,6 @@
             android:textSize="16sp" />
 
         <!-- Label Email -->
-
         <TextView
             android:id="@+id/txtLabelEmail"
             android:layout_width="wrap_content"
@@ -95,9 +91,8 @@
             android:textStyle="bold" />
 
         <!-- Cajita Email -->
-
         <EditText
-            android:id="@+id/editTxtEmail"
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
@@ -110,7 +105,6 @@
             android:textSize="16sp" />
 
         <!-- Label Contraseña -->
-
         <TextView
             android:id="@+id/txtLabelContrasena"
             android:layout_width="wrap_content"
@@ -121,7 +115,6 @@
             android:textStyle="bold" />
 
         <!-- Cajita Contraseña -->
-
         <EditText
             android:id="@+id/editContrasena"
             android:layout_width="match_parent"
@@ -136,9 +129,8 @@
             android:textSize="16sp" />
 
         <!-- Label Repetir Contraseña -->
-
         <TextView
-            android:id="@+id/txtLabelRepetir"
+            android:id="@+id/txtLabelRepetirC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -147,14 +139,13 @@
             android:textStyle="bold" />
 
         <!-- Cajita Repetir Contraseña -->
-
         <EditText
-            android:id="@+id/editRepetirContrasena"
+            android:id="@+id/editRepetirC"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input_normal"
-            android:hint="repetí tú contraseña"
+            android:hint="repetí tu contraseña"
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:textColor="#000000"
@@ -162,7 +153,6 @@
             android:textSize="16sp" />
 
         <!-- Error: contraseñas no coinciden -->
-
         <TextView
             android:id="@+id/txtErrorContrasena"
             android:layout_width="wrap_content"
@@ -174,7 +164,6 @@
             android:visibility="gone" />
 
         <!-- Botón Crear cuenta -->
-
         <Button
             android:id="@+id/btnCrearCuenta"
             android:layout_width="match_parent"
@@ -190,7 +179,6 @@
             android:textStyle="bold" />
 
         <!-- ¿Ya tenés cuenta? Ingresar -->
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -207,9 +195,8 @@
                 android:textSize="14sp"/>
 
             <!-- Texto = Ingresar (clickeable) -->
-
              <TextView
-                android:id="@+id/txtIngresar"
+                android:id="@+id/txtClickIngresar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                  android:layout_marginStart="4dp"

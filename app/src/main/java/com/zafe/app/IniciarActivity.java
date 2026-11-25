@@ -1,24 +1,46 @@
 package com.zafe.app;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class IniciarActivity extends AppCompatActivity {
+    EditText editTxtEmail, editContrasena;
+    Button btnIngresar;
+    TextView txtError, txtCrearCuenta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_iniciar);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        editTxtEmail = findViewById(R.id.editTxtEmail);
+        editContrasena = findViewById(R.id.editContrasena);
+        btnIngresar = findViewById(R.id.btnIngresar);
+        txtError = findViewById(R.id.txtError);
+        txtCrearCuenta = findViewById(R.id.txtCrearCuenta);
+
+        btnIngresar.setOnClickListener(v -> {
+            String email = editTxtEmail.getText().toString().trim();
+            String pass = editContrasena.getText().toString().trim();
+
+            if (email.isEmpty() || pass.isEmpty() || !email.contains("@") || pass.length() < 6) {
+                txtError.setVisibility(View.VISIBLE);
+            } else {
+                txtError.setVisibility(View.GONE);
+                Toast.makeText(this, "¡Bienvenida a Zafe!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(IniciarActivity.this, HomeActivity.class));
+                finish();
+            }
+        });
+
+        txtCrearCuenta.setOnClickListener(v -> {
+            startActivity(new Intent(IniciarActivity.this, CrearCuentaActivity.class));
         });
     }
 }

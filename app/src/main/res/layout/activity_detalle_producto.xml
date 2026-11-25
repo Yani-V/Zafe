@@ -30,7 +30,7 @@
                   android:layout_width="28dp"
                   android:layout_height="23dp"
                   app:srcCompat="@drawable/arrow_back_ios"
-                  app:tint="#7B2D3B" />
+                  app:tint="#7b2d3b" />
 
              <TextView
                   android:id="@+id/titleDetalleProducto"
@@ -39,7 +39,7 @@
                   android:layout_marginStart="12dp"
                   android:layout_weight="1"
                   android:text="Detalle del producto"
-                  android:textColor="#7B2D3B"
+                  android:textColor="#7b2d3b"
                   android:textSize="20sp"
                   android:textStyle="bold" />
 
@@ -93,7 +93,7 @@
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="4dp"
                 android:text="Vencido"
-                android:textColor="#A31515"
+                android:textColor="#a31515"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -262,7 +262,7 @@
 
              <!-- Botón Eliminar -->
             <Button
-                android:id="@+id/btnElliminarr"
+                android:id="@+id/btnEliminarr"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -271,7 +271,7 @@
                 android:backgroundTint="@null"
                 app:backgroundTint="@null"
                 android:text="Eliminar"
-                android:textColor="#7B2D3B" />
+                android:textColor="#7b2d3b" />
 
             <Button
                 android:id="@+id/btnEditar"
@@ -283,7 +283,7 @@
                 android:backgroundTint="@null"
                 app:backgroundTint="@null"
                 android:text="Editar"
-                android:textColor="#FFFCEE" />
+                android:textColor="#fffcee" />
         </LinearLayout>
 
     </LinearLayout>
