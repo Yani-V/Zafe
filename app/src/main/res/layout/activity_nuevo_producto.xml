@@ -286,7 +286,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
             android:ems="10"
-            android:hint="Ciudad - Provincia"
+            android:hint="Pasillo 2 - Estante B"
             android:inputType="text"
             android:background="@drawable/input_normal"
             android:paddingStart="15dp"

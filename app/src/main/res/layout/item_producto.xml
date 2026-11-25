@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta item producto -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_cardProducto1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/borde"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="12dp" >
+
+    <!-- Datos izquierda producto 1 -->
+    <LinearLayout
+        android:id="@+id/home_datosProducto1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Nombre producto 1 -->
+        <TextView
+            android:id="@+id/home_nombreProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aceite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Proveedor producto 1 -->
+        <TextView
+            android:id="@+id/home_proveedorProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIERBASRURAL.SRL · El Bolsón"
+            android:textColor="#b3b1b1" />
+
+        <!-- Stock producto 1 -->
+        <LinearLayout
+            android:id="@+id/home_stockProducto1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!-- Cantidad producto 1 -->
+            <TextView
+                android:id="@+id/home_cantidadProducto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textStyle="bold" />
+
+            <!-- Mínimo producto 1 -->
+            <TextView
+                android:id="@+id/home_minimoProducto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="/  mín. 15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Precio y estado producto 1 -->
+    <LinearLayout
+        android:id="@+id/home_precioProducto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/home_precioPesosProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 1.800,00"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_precioDolarProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US$ 1,17"
+            android:textColor="#b3b1b1" />
+
+        <TextView
+            android:id="@+id/home_vencimientoProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17/10/2026"
+            android:textColor="#b3b1b1" />
+
+        <TextView
+            android:id="@+id/home_estadoProducto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_badge_vencido"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="Vencido"
+            android:textColor="#a31515"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
